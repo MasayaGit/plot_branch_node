@@ -9,8 +9,5 @@ def make_json():
         "layer2":{"hidden_layer":{"input_features":512,"out_features":512}},
         "layer3":{"output_layer":{"input_features":512,"out_features":10}}
     } 
-    with open('./model_json/json/mlp.json', 'w') as f:
+    with open('/Users/info/Desktop/lab/program/plot_branch_node/model_json/json/mlp.json', 'w') as f:
         json.dump(json_value, f, ensure_ascii=False)
-
-if __name__ == "__main__":
-    make_json()
