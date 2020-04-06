@@ -7,5 +7,5 @@ def get_branch(layer_json_value):
     number_of_node = layer_json_value["input_features"]
     #入力層ノードの次数はinput_layerのout_featuresと同じ
     node_branch = layer_json_value["out_features"]
-    #key次数(横軸) valueノード数(縦軸) 
+    #np.full(10, 3) なら array([3, 3, 3, 3, 3, 3, 3, 3, 3, 3])
     return np.full(number_of_node, node_branch)

@@ -12,5 +12,5 @@ def make_json():
         "layer2":{"input_features":1,"out_features":2,"layer_type":"hidden","processing_type":"linear"},
         "layer3":{"input_features":2,"out_features":4, "layer_type":"output","processing_type":"linear"}
     } 
-    with open('/Users/info/Desktop/lab/program/plot_branch_node/model_json/json/auto_encoder_test.json', 'w') as f:
+    with open('/Users/info/Desktop/lab/program/plot_branch_node/forward/model_json/json/auto_encoder_test.json', 'w') as f:
         json.dump(json_value, f, ensure_ascii=False)
