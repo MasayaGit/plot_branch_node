@@ -10,5 +10,5 @@ def make_json():
         "layer2":{"input_features":9216,"out_features":128,"layer_type":"hidden","processing_type":"linear"},
         "layer3":{"input_features":128,"out_features":10, "layer_type":"output","processing_type":"linear"}
     } 
-    with open('/Users/info/Desktop/lab/program/plot_branch_node/model_json/json/simple_cnn.json', 'w') as f:
+    with open('/Users/info/Desktop/lab/program/plot_branch_node/forward/model_json/json/simple_cnn.json', 'w') as f:
         json.dump(json_value, f, ensure_ascii=False)
