@@ -1,7 +1,7 @@
 # coding: UTF-8
 import json
 
-#ImageNetの1000クラス 画像サイズは32×32を想定
+#ImageNetの1000クラス 画像サイズは224×224ではなく32×32を想定 ノード数がとても大きい数字になるから
 #MaxPool2dを適用した結果の画像のサイズは前の層と変わらないとする
 #モデル構造
 #http://aidiary.hatenablog.com/entry/20180212/1518404395
