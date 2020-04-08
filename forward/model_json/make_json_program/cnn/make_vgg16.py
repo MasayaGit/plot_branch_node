@@ -7,35 +7,35 @@ import json
 #http://aidiary.hatenablog.com/entry/20180212/1518404395
 def make_json():
     json_value = {
-        "layer0":{"input_channels":3, "out_channels":64,"kernel_size":3,"layer_type":"input","processing_type":"cnn"},
-        "layer1":{"input_channels":64, "out_channels":64,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn"},
+        "layer0":{"input_channels":3, "out_channels":64,"kernel_size":3,"layer_type":"input","processing_type":"cnn","skip_connection_flag":False},
+        "layer1":{"input_channels":64, "out_channels":64,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn","skip_connection_flag":False},
         
         #224×224 -> 112*112
         "layer2":{"input_channels":64, "out_channels":64,"stride":2,"layer_type":"hidden","processing_type":"max_pooling"},
 
-        "layer3":{"input_channels":64, "out_channels":128,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn"},
-        "layer4":{"input_channels":128, "out_channels":128,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn"},
+        "layer3":{"input_channels":64, "out_channels":128,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn","skip_connection_flag":False},
+        "layer4":{"input_channels":128, "out_channels":128,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn","skip_connection_flag":False},
         
         #112×112 -> 56*56
         "layer5":{"input_channels":128, "out_channels":128,"stride":2,"layer_type":"hidden","processing_type":"max_pooling"},
 
-        "layer6":{"input_channels":128, "out_channels":256,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn"},
-        "layer7":{"input_channels":256, "out_channels":256,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn"},
-        "layer8":{"input_channels":256, "out_channels":256,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn"},
+        "layer6":{"input_channels":128, "out_channels":256,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn","skip_connection_flag":False},
+        "layer7":{"input_channels":256, "out_channels":256,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn","skip_connection_flag":False},
+        "layer8":{"input_channels":256, "out_channels":256,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn","skip_connection_flag":False},
         
         #56×56 -> 28*28
         "layer9":{"input_channels":256, "out_channels":256,"stride":2,"layer_type":"hidden","processing_type":"max_pooling"},
 
-        "layer10":{"input_channels":256, "out_channels":512,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn"},
-        "layer11":{"input_channels":512, "out_channels":512,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn"},
-        "layer12":{"input_channels":512, "out_channels":512,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn"},
+        "layer10":{"input_channels":256, "out_channels":512,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn","skip_connection_flag":False},
+        "layer11":{"input_channels":512, "out_channels":512,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn","skip_connection_flag":False},
+        "layer12":{"input_channels":512, "out_channels":512,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn","skip_connection_flag":False},
 
         #28×28 -> 14*14
         "layer13":{"input_channels":512, "out_channels":512,"stride":2,"layer_type":"hidden","processing_type":"max_pooling"},
 
-        "layer14":{"input_channels":512, "out_channels":512,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn"},
-        "layer15":{"input_channels":512, "out_channels":512,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn"},
-        "layer16":{"input_channels":512, "out_channels":512,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn"},
+        "layer14":{"input_channels":512, "out_channels":512,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn","skip_connection_flag":False},
+        "layer15":{"input_channels":512, "out_channels":512,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn","skip_connection_flag":False},
+        "layer16":{"input_channels":512, "out_channels":512,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn","skip_connection_flag":False},
 
         #14×14 -> 7*7
         "layer17":{"input_channels":512, "out_channels":512,"stride":2,"layer_type":"hidden","processing_type":"max_pooling"},
