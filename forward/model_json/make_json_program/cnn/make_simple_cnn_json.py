@@ -5,8 +5,8 @@ import json
 #https://github.com/pytorch/examples/blob/master/mnist/main.py
 def make_json():
     json_value = {
-        "layer0":{"input_channels":1, "out_channels":32,"kernel_size":3,"layer_type":"input","processing_type":"cnn","skip_connection_flag":False},
-        "layer1":{"input_channels":32, "out_channels":64,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn","skip_connection_flag":False},
+        "layer0":{"input_channels":1, "out_channels":32,"kernel_size":3,"layer_type":"input","processing_type":"cnn","skip_connection":0},
+        "layer1":{"input_channels":32, "out_channels":64,"kernel_size":3,"layer_type":"hidden","processing_type":"cnn","skip_connection":0},
         "layer2":{"input_features":9216,"out_features":128,"layer_type":"hidden","processing_type":"linear"},
         "layer3":{"input_features":128,"out_features":10, "layer_type":"output","processing_type":"linear"}
     } 

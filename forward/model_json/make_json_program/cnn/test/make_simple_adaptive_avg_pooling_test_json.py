@@ -5,11 +5,11 @@ import json
 #https://github.com/pytorch/examples/blob/master/mnist/main.py
 def make_json():
     json_value = {
-        "layer0":{"input_channels":3, "out_channels":5,"kernel_size":3,"layer_type":"input","processing_type":"cnn","skip_connection_flag":False},
-        "layer1":{"input_channels":5, "out_channels":7,"kernel_size":2,"layer_type":"hidden","processing_type":"cnn","skip_connection_flag":False},
+        "layer0":{"input_channels":3, "out_channels":5,"kernel_size":3,"layer_type":"input","processing_type":"cnn","skip_connection":0},
+        "layer1":{"input_channels":5, "out_channels":7,"kernel_size":2,"layer_type":"hidden","processing_type":"cnn","skip_connection":0},
         
         #画像サイズは output_size * output_sizeになる
-        "layer2":{"input_channels":7, "out_channels":7,"output_size":1,"layer_type":"hidden","processing_type":"adaptive_avg_pooling","skip_connection_flag":False},
+        "layer2":{"input_channels":7, "out_channels":7,"output_size":1,"layer_type":"hidden","processing_type":"adaptive_avg_pooling","skip_connection":0},
 
         #adaptive_avg_poolingによって、input_features = output_size * output_size * input_channels となる
         "layer3":{"input_features":7,"out_features":4,"layer_type":"hidden","processing_type":"linear"},
