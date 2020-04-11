@@ -11,8 +11,8 @@ def get_branch(layer_json_value,img_size):
     #forwardの向きだけを考える場合、次数は１。各ピクセルが一回だけ参照されるようなストライド、プーリングサイズを想定している
     #自分はストライドを指定する
     node_branch = 1
-    if layer_json_value["skip_connection_flag"]:
-        node_branch += 1
+    if layer_json_value["skip_connection"] > 0:
+        node_branch += layer_json_value["skip_connection"]
     #np.full(10, 3) なら array([3, 3, 3, 3, 3, 3, 3, 3, 3, 3])
     node_branch_list = np.full(number_of_node, node_branch)
     img_size = layer_json_value["output_size"]
