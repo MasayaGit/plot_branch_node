@@ -1,10 +1,13 @@
 # coding: UTF-8
 import json
 
-#ImageNetの1000クラス 画像サイズは224×224を想定 ノード数がとても大きい数字になるから
-#MaxPool2dを適用した結果の画像のサイズは前の層と変わらないとする
+#ImageNetの1000クラス 画像サイズは224×224を想定 
+#MaxPoolingは除去。
+#Blockは単一のCNNのみ
+#階層構造になっているCNNを見るだけ。
 #モデル構造
-#http://aidiary.hatenablog.com/entry/20180212/1518404395
+#https://arxiv.org/abs/1707.06484
+#https://github.com/osmr/imgclsmob/tree/master/pytorch/pytorchcv/models
 def make_json():
     json_value = {
         #input
