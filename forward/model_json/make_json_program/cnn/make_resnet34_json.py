@@ -2,8 +2,6 @@
 import json
 
 #ImageNetの1000クラス 画像サイズは224×224を想定 
-#モデル構造
-#http://aidiary.hatenablog.com/entry/20180212/1518404395
 def make_json():
     json_value = {
         #input
